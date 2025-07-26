@@ -1,0 +1,18 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+
+# Ignore node modules (if any)
+node_modules/
+
+# Ignore OS and IDE files
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Do NOT ignore app/ or *.py files 
