@@ -153,7 +153,3 @@ docker run --rm \
 ✅ **Execution Time**: < 10 seconds per PDF  
 ✅ **Offline Operation**: No internet access required  
 ✅ **Docker Support**: Fully containerized solution  
-
-## Next Steps
-- **Round 1B**: Persona-driven document intelligence
-- **Round 2**: Futuristic webapp with Adobe PDF Embed API 
