@@ -57,13 +57,37 @@ python app/src/main.py
 ```
 
 ### Docker Deployment
-```bash
-# Build the Docker image
+
+You can use either of the following two methods to deploy the PDF Extractor application using Docker:
+
+✅ Method 1: Pull from Docker Hub (Recommended for users)
+This method allows anyone to quickly run the app without building the image manually.
+
+# Pull the image from Docker Hub
+docker pull murali0415/pdf-extractor:latest
+
+# Run the container
+docker run --rm \
+  -v $(pwd)/input:/app/input \
+  -v $(pwd)/output:/app/output \
+  --network none \
+  murali0415/pdf-extractor:latest
+
+🛠️ Method 2: Build Locally (For Developers)
+If you want to build the image yourself, use this method:
+
+
+# Build the Docker image locally
 docker build --platform linux/amd64 -t pdf-extractor:latest .
 
 # Run the container
-docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none pdf-extractor:latest
-```
+docker run --rm \
+  -v $(pwd)/input:/app/input \
+  -v $(pwd)/output:/app/output \
+  --network none \
+  pdf-extractor:latest
+
+📁 Note: Make sure the input and output directories exist in your current working directory ($(pwd)) before running the container.
 
 ### Input/Output
 - **Input**: PDF files in `/app/input` directory
